@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+	<data>
+		<record id="grupo_gestor_usuarios" model="res.groups">
+			<field name="name">Clipmetrajes/Gestor Usuarios</field>
+			<field name="comment">Perfil gestor de los Usuarios</field>
+		</record>
+
+		<record id="grupo_gestor_clipmetrajes" model="res.groups">
+			<field name="name">Clipmetrajes/Gestor Clipmetrajes</field>
+			<field name="comment">Perfil gestor de los Clipmetrajes</field>
+		</record>
+
+		<record id="grupo_gestor_valoraciones" model="res.groups">
+			<field name="name">Clipmetrajes/Gestor Valoraciones</field>
+			<field name="comment">Perfil gestor de las Valoraciones</field>
+		</record>
+
+		<record id="grupo_vista_usuarios" model="res.groups">
+			<field name="name">Clipmetrajes/Vista Usuarios</field>
+			<field name="comment">Perfil gestor de los Usuarios</field>
+		</record>
+
+		<record id="grupo_vista_clipmetrajes" model="res.groups">
+			<field name="name">Clipmetrajes/Vista Clipmetrajes</field>
+			<field name="comment">Perfil gestor de los Clipmetrajes</field>
+		</record>
+
+		<record id="grupo_vista_valoraciones" model="res.groups">
+			<field name="name">Clipmetrajes/Vista Valoraciones</field>
+			<field name="comment">Perfil gestor de las Valoraciones</field>
+		</record>
+
+		<record id="base.user_admin" model="res.users">
+			<field name="groups_id" eval="[(4, ref('clipmetrajes.grupo_gestor_usuarios')), (4, ref('clipmetrajes.grupo_gestor_clipmetrajes')), (4, ref('clipmetrajes.grupo_gestor_valoraciones'))]"/>
+		</record>
+
+		<record id="base.default_user" model="res.users">
+			<field name="groups_id" eval="[(4, ref('clipmetrajes.grupo_vista_usuarios')), (4, ref('clipmetrajes.grupo_vista_clipmetrajes')), (4, ref('clipmetrajes.grupo_vista_valoraciones'))]"/>
+		</record>
+	</data>
+</odoo>
