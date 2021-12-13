@@ -8,6 +8,8 @@ Checkout the main project here:
   <img src="https://github-readme-stats.vercel.app/api/pin/?username=SkinnyDevi&repo=MU-VR-Experience&theme=dark" alt="Main Project" width="400px" height="140px"/>
 </a>
 
+<br/>
+
 Tech Stack
 
 <a href="https://www.python.org">
