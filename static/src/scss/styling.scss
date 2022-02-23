@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+$dark-mode: rgb(50, 50, 50);
+$vr-blue: rgb(49, 112, 187);
+$vr-light-blue: rgb(110, 163, 228);
+$vr-dark-blue: rgb(37, 80, 133);
+$vr-light-purple: rgb(146, 146, 255);
+
+body {
+	font-family: 'Architects Daughter', sans-serif !important;
+	font-size: 1.5rem;
+}
+
+.o_main_navbar {
+	background-color: $vr-blue !important;
+}
+
+.o_main_navbar > ul > li > a:hover, .o_main_navbar > ul > li > label:hover,
+a:not([href]):not([tabindex]):hover, a:not([href]):not([tabindex]):focus {
+	background-color: $vr-dark-blue !important;
+}
+
+.o_kanban_record {
+	border-radius: 15px;
+	background-color: $vr-blue !important;
+	border-color: $vr-dark-blue !important;
+}
+
+.o_kanban_record_title,
+.o_list_view .o_list_table {
+	color: white !important;
+}
+
+.o_MessageList_empty,
+.o_list_view .table-responsive .o_list_table thead tr:nth-child(1) th {
+	background-color: $dark-mode !important;
+	color: white;
+}
+
+.btn-group > .btn-group:not(:first-child) > .btn,
+.btn-group > .btn-group:not(:last-child) > .btn {
+	background-color: $dark-mode !important;
+	color: white !important;
+}
+
+.btn-primary {
+	background-color: $vr-dark-blue !important;
+	border-color: $vr-dark-blue !important;
+}
+
+.btn-secondary {
+	background-color: $vr-light-blue !important;
+	border-color: $vr-light-blue !important;
+	color: white !important;
+}
+
+.o_list_view .o_list_table tbody > tr > td:not(.o_list_record_selector):not(.o_handle_cell):not(.o_list_button),
+.o_list_view .o_list_table .o_list_record_selector {
+	background-color: $dark-mode !important;
+}
+
+.o_list_view .custom-checkbox:not(.o_boolean_toggle) .custom-control-label::after,
+.o_list_selection_box {
+	background-color: $vr-dark-blue !important;
+	border-radius: 15px !important;
+}
+
+.btn-info {
+	background-color: $vr-light-purple !important;
+	border-color: $vr-light-purple !important;
+	color: black !important;
+}
+
+html .o_web_client > .o_action_manager > .o_action > .o_control_panel,
+html .o_web_client .o_control_panel,
+.o_controller_with_searchpanel .o_renderer_with_searchpanel,
+.o_control_panel .breadcrumb, .o_searchview, .o_search_panel,
+.o_searchview .o_searchview_input_container .o_searchview_input,
+.list-group-item {
+	background-color: $dark-mode !important;
+	color: white !important;
+}
+
+.o_control_panel .breadcrumb > li,
+.o_search_panel .list-group-item .o_search_panel_label_title {
+	color: white !important;
+}
+
+.o_menu_apps .dropdown-menu {
+	background: rgb(0,175,247) !important;
+	background: linear-gradient(110deg, rgba(0,175,247,1) 0%, rgba(204,166,255,1) 100%) !important;
+}
+
+.oe_module_icon {
+	border-radius: 15px;
+}

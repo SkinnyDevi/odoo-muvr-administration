@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+	<data>
+		<record model="ir.actions.report" id="clipmetrajes.clipmetrajes_report">
+			<field name="name">Generar Informe de Valoraciones</field>
+			<field name="model">clipmetrajes.clipmetrajes</field>
+			<field name="report_type">qweb-html</field>
+			<field name="report_name">clipmetrajes.clipmetrajes_report_template</field>
+			<field name="report_file">clipmetrajes.clipmetrajes_report_template</field>
+			<field name="binding_model_id" ref="clipmetrajes.model_clipmetrajes_clipmetrajes"/>
+			<field name="binding_type">report</field>
+		</record>
+	</data>
+</odoo>

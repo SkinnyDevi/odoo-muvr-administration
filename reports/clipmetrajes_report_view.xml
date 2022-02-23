@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<template id="clipmetrajes_report_template">
+			<t t-call="web.html_container">
+				<head>
+					<style>
+						h1 {
+							font-style: italic;
+							font-weight: bold;
+							text-decoration: underline;
+						}
+						
+						table {
+							width: 800px;
+							border-collapse: collapse;
+							overflow: hidden;
+							box-shadow: 0 0 20px rgba(0,0,0,0.1);
+							background: linear-gradient(45deg, #49a09d, #5f2c82);
+							border-radius: 15px;
+						}
+
+						th,
+						td {
+							padding: 15px;
+							background-color: rgba(255,255,255,0.2);
+							color: #fff;
+						}
+
+						th {
+							text-align: left;
+						}
+						
+						thead>tr>th {
+								background-color: #55608f;
+						}
+
+						tbody>tr:hover {
+							background-color: rgba(255, 255, 255, 0.3);
+						}
+
+						tbody>td {
+							position: relative;
+						}
+
+						tbody>d:hover:before {
+							content: "";
+							position: absolute;
+							left: 0;
+							right: 0;
+							top: -9999px;
+							bottom: -9999px;
+							background-color: rgba(255, 255, 255, 0.2);
+							z-index: -1;
+						}
+
+						p {
+							font-size: 13px;
+							font-style: italic;
+							font-weight: bold;
+							margin-top: 15px;
+						}
+
+						img {
+							border-radius: 15px;
+							width: 100px;
+							height: 150px;
+						} 
+					</style>
+				</head>
+				<div class="page">
+					<br/>
+					<t t-foreach='docs' t-as='entry'>
+						<div>
+							<img t-attf-src="data:image/*;base64,{{entry.clip_image}}"/>
+							<h1 t-field="entry.clip_name"/>
+						</div>
+						<table>
+							<thead>
+								<tr>
+									<th>Usuario</th>
+									<th>Valoracion</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr t-foreach='entry.clip_ratings' t-as='rating'>
+									<td>
+										<span t-esc="rating.username.username"/>
+									</td>
+									<td>
+										<span t-esc="rating.rating"/>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<p>Copyright © 2022 Manos Unidas VR Experience.</p>
+					</t>
+				</div>
+			</t>
+		</template>
+	</data>
+</odoo>

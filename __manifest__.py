@@ -27,6 +27,8 @@
         'views/templates.xml',
         'security/security.xml',
         'security/ir.model.access.csv',
+        'reports/clipmetrajes_report.xml',
+        'reports/clipmetrajes_report_view.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
